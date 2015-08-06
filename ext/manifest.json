@@ -1,0 +1,29 @@
+{
+  "name": "ScrumpyBetter",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "This extension tracks statistics and helps bet on MagicScrumpy's tournaments",
+  "default_locale": "en",
+  "permissions": [
+    "http://www.twitch.tv/*/chat?popout="
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://www.twitch.tv/*/chat?popout="
+      ],
+      "css": [
+        "src/inject/inject.css"
+      ]
+    },
+    {
+      "matches": [
+        "http://www.twitch.tv/*/chat?popout="
+      ],
+      "js": [
+        "src/inject/d3.v3.min.js",
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}
